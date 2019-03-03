@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Dynamig | Create Image Placeholder</title>
+	<style type="text/css">
+		*{box-sizing:border-box}body{min-width:500px;margin:0px;overflow-x:hidden;font-family:arial,sans-serif;background:#e9f0fa}.main{width:500px;margin:0 auto;max-width:100%}.heading{font-size:16px;line-height:30px;background:#333b4e;color:#fff;padding:10px;margin:0 0 15px}.row{margin:0 -10px;clear:both}.col{float:left;width:100%;padding:0 10px}.col-6{width:50%}.form{padding:0 10px}.form-element{margin:0 0 20px}input{outline:none;border:1px solid #ddd;width:100%;border-radius:5px;height:30px;padding:0 5px}.btn{padding:10px;cursor:pointer;background:#4caf50;color:#fff;border:0;outline:none;border-radius:5px;text-decoration:none}.btn:hover{background:#449d44}.txt-center{text-align:center}.result-option{float:left;width:100%;display:none;clear:both}.result{padding-right:70px;border-radius:0}.pos-rel{position:relative;overflow:hidden}.res-option{position:absolute;right:0;width:30px;height:30px;top:50%;transform:translateY(-50%);background:#ddd url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAqUlEQVQ4T+3TPQ5BQRiF4ec2oqMQUVqABSjoxAJ0Ep1KotULnRaxAQVaqyAWwB7sgEImUdzcYvxE6WvPvOdMznyToI0dCuLTxSZ9JMEaTcxfwHtcsnBwq6L+FIrIR4zuuAY9JKfhEWYvbhDkJYZZ+IgbVhGDDhooZ+ETzuhF4HFIRekP83Fhg9Acpr6A06/ycfLP4ANy2EaWpIUaKmFJ0tPH4o2PEfqZPACA7TYRtR6Q8wAAAABJRU5ErkJggg==) no-repeat center center;cursor:pointer}.res-option.prev{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVQ4T6XTPUpDQRTF8V8ESSt2UVKJgr2QRkGj2xAbF6DYiHtQCAQs7Oy0cQOiwSptRK3cgFbpBBWUCyM8H3kfkGkezDv3P+fMvdNQf11iNycfNzCHM6xjpoC3iSbu0c5qAnCDeZziswBwl/5t4CEP+MIaRhVpFpOD5TzgB7H5WgJYwCDpXrCPq4gTEaoA+eIu3rCE4ypAFMfFreAZUfxeN0Ir2S4sDlCZg1ts4yl94+QevnH056IMsJrmYy9ju58AB3UAk5oyEfCBLQxrTPV1avdJ1sE5dnBRMomhj7ZF/zt4zAJmcVjxFkI/RkT45zQucao1NeAXNjI8l8UNXKwAAAAASUVORK5CYII=);right:30px;border-right:1px solid #bbb}.pop-up{position:absolute;padding:10px;color:#fff;text-align:center;background:#000;opacity:0;bottom:-50px;left:50%;transform:translateX(-50%);transition:0.4s all;border-radius:15px}.pop-up.show{opacity:0.8;bottom:50px}
+	</style>
+</head>
+
+<body>
+	<section class="main pos-rel">
+		<h1 class="heading">Dynamig</h1>
+		<div class="form">
+			<div class="row">
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="number" name="width" id="width" placeholder="Width" required/>
+					</div>
+				</div>
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="number" name="height" id="height" placeholder="Height" required/>
+					</div>
+				</div>
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="text" name="bgcolor" minlength="3" maxlength="6" id="bgcolor" placeholder="Background Color (Default: fff)" required/>
+					</div>
+				</div>
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="text" name="fontcolor" minlength="3" maxlength="6" id="fontcolor" placeholder="Font Color (Default: 000)" required/>
+					</div>
+				</div>
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="text" name="text" id="text" placeholder="Text (Default: width x height)" required/>
+					</div>
+				</div>
+				<div class="col col-6">
+					<div class="form-element">
+						<input class="form-input" type="number" name="fontsize" id="fontsize" placeholder="Font Size (Default: 16)" required/>
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-element txt-center">
+						<button class="btn" id="create-image">Create Image Link</button>
+					</div>
+				</div>
+				<div class="result-option">
+					<div class="col">
+						<div class="form-element pos-rel">
+							<input class="form-input result" type="text" name="result" id="result" placeholder="" readonly />
+							<a id="prev" class="res-option prev" href="" target="_blank" title="Preview"></a> <span id="copy" class="res-option copy" title="Copy"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pop-up">URL Copied</div>
+	</section>
+	<script src="./popup.js"></script>
+</body>
+
+</html>
